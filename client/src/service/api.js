@@ -1,5 +1,5 @@
 import axios from 'axios';
-const URL = "http://localhost:8001"; 
+const URL = "http://meet-up-backend-two.vercel.app"; 
 
 export const addUser = async (data) => {
   try {
