@@ -9,7 +9,12 @@ import { User } from './schema/user.js';
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: '',
+    methods: ['GET', 'POST', 'DELETE'],
+    // allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+  }));
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
