@@ -10,7 +10,7 @@ import { User } from './schema/user.js';
 const app = express();
 
 app.use(cors({
-    origin: '',
+    origin: 'https://meet-up-client-six.vercel.app',
     methods: ['GET', 'POST', 'DELETE'],
     // allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
