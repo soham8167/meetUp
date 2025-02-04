@@ -10,11 +10,14 @@ import { User } from './schema/user.js';
 const app = express();
 
 app.use(cors({
-    origin: 'https://meet-up-mern.vercel.app',
+    origin: '',
     methods: ['GET', 'POST', 'DELETE'],
     // allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
   }));
+app.get ("/", (req, res)=>{
+    res.json("hello");
+})
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
